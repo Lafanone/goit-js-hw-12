@@ -21,7 +21,7 @@ const gallery = document.querySelector('.gallery');
 
 async function fetchImages() {
   showLoader();
-  hideLoadMoreButton;
+  hideLoadMoreButton();
   try {
     const data = await getImagesByQuery(currentQuery, currentPage);
     const images = data.hits;
@@ -84,7 +84,7 @@ form.addEventListener('submit', event => {
 
 loadMoreBtn.addEventListener('click', () => {
   currentPage += 1;
-  fetchImages;
+  fetchImages();
 });
 
 function smoothScroll() {
